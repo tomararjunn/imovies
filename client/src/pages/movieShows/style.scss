@@ -1,0 +1,28 @@
+.shows-page {
+  .date-title {
+    color: var(--accent2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 0.4rem;
+  }
+
+  .show-card {
+    .time {
+      font-size: 1.5rem;
+      font-weight: 800;
+    }
+
+    .theatre {
+      font-weight: 600;
+    }
+
+    .prices {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .seats-left {
+      color: var(--ok);
+      font-size: 0.9rem;
+    }
+  }
+}

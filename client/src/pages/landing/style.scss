@@ -1,0 +1,29 @@
+.landing {
+  .hero {
+    padding: 5rem 0 4rem;
+    background: radial-gradient(circle at 50% 0%, rgba(255, 77, 109, 0.25), transparent 60%);
+
+    h1 {
+      font-weight: 800;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+
+      span {
+        color: #ff4d6d;
+      }
+    }
+
+    .lead {
+      color: #9aa0b8;
+      margin: 1rem auto 2rem;
+      max-width: 560px;
+    }
+  }
+
+  .features {
+    padding-bottom: 4rem;
+
+    svg {
+      color: #ffb703;
+    }
+  }
+}

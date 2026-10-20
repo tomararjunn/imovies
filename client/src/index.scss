@@ -1,0 +1,172 @@
+:root,
+[data-theme="dark"] {
+  --bg: #0a0e1c;
+  --header-bg: #0a0e1c;
+  --card: #14151c;
+  --card2: #1f2233;
+  --text: #e9ebf5;
+  --muted: #9aa0b8;
+  --border: rgba(255, 255, 255, 0.08);
+  --accent: #e11d48;
+  --accent-soft: rgba(225, 29, 72, 0.18);
+  --accent-text: #ff2d55;
+  --accent2: #ffb703;
+  --ok: #2ecc71;
+  --shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+}
+
+[data-theme="light"] {
+  --bg: #f3f4f9;
+  --header-bg: #ffffff;
+  --card: #ffffff;
+  --card2: #eef0f7;
+  --text: #161a2c;
+  --muted: #5f6683;
+  --border: rgba(0, 0, 0, 0.1);
+  --accent-text: #d6143f;
+  --accent2: #d98a00;
+  --shadow: 0 6px 18px rgba(20, 30, 60, 0.12);
+
+  .btn-outline-light {
+    color: var(--text);
+    border-color: rgba(0, 0, 0, 0.25);
+
+    &:hover {
+      background: var(--card2);
+      color: var(--text);
+    }
+  }
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent2);
+  text-decoration: none;
+
+  &:hover {
+    color: var(--accent);
+  }
+}
+
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main {
+  flex: 1;
+}
+
+.page-wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+
+  &.wide {
+    max-width: 1500px;
+  }
+}
+
+.page-title {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+// big centered title like "Available Movies"
+.hero-title {
+  text-align: center;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  margin: 0.5rem 0 2rem;
+
+  span {
+    color: var(--accent-text);
+  }
+}
+
+.text-muted-2 {
+  color: var(--muted);
+}
+
+.card-dark {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem;
+}
+
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 1.6rem;
+}
+
+.btn-accent {
+  background: var(--accent);
+  border: none;
+  color: #fff;
+  font-weight: 600;
+
+  &:hover,
+  &:focus {
+    background: #be123c;
+    color: #fff;
+  }
+
+  &:disabled {
+    background: #8a3040;
+    color: #ddd;
+  }
+}
+
+.form-control,
+.form-select {
+  background-color: var(--card2);
+  border-color: var(--border);
+  color: var(--text);
+
+  &:focus {
+    background-color: var(--card2);
+    color: var(--text);
+    border-color: var(--accent);
+    box-shadow: 0 0 0 0.2rem rgba(225, 29, 72, 0.2);
+  }
+
+  &::placeholder {
+    color: #6c7391;
+  }
+
+  &:disabled {
+    background-color: var(--card2);
+    opacity: 0.6;
+  }
+}
+
+.form-label {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.table {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text);
+  --bs-table-border-color: var(--border);
+  vertical-align: middle;
+}
+
+.chip {
+  display: inline-block;
+  background: var(--accent-soft);
+  color: var(--accent-text);
+  border-radius: 20px;
+  padding: 0.15rem 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}

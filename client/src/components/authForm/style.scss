@@ -1,0 +1,16 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  padding: 3rem 1rem;
+
+  .auth-card {
+    width: 100%;
+    max-width: 420px;
+  }
+
+  .auth-links {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #9aa0b8;
+  }
+}
